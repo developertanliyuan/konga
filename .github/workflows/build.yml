@@ -23,3 +23,11 @@ jobs:
         run: |
           echo "print source info"
           ls -al
+      - name: use nodejs, version is ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node_version: ${{ matrix.node_version }}
+      - name: install dependency packages and show node_modules
+        run: |
+        npm install --unsafe-perm
+        ls -al ./node_modules
