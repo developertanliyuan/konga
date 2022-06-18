@@ -29,5 +29,5 @@ jobs:
           node_version: ${{ matrix.node_version }}
       - name: install dependency packages and show node_modules
         run: |
-        npm install --unsafe-perm
-        ls -al ./node_modules
+          npm install --unsafe-perm
+          ls -al ./node_modules
